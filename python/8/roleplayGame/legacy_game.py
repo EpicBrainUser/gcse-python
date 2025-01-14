@@ -16,8 +16,7 @@
 #Please enter your choice: >>
 #Ideally you will use separate functions for each option, passing the updated inventory between the functions.
 
-#import simple_menu.py
-from simple_menu import simple_menu
+import simple_menu.py
 
 
 def game():
@@ -25,14 +24,8 @@ def game():
     while wanna_play:
         inventory = []
     
-
-        def add_item_to_inventory():
-            item = input("Enter the item name to add: ")
-            inventory.append(item)
-            print(f"{item} has been added to your inventory.")
-
-#        def add_items_to_menu():
-#            print("This option isn't developed yet")
+        def add_items_to_menu():
+            print("This option isn't developed yet")
         def remove_item_from_inventory():
             print("This option isn't developed yet")
     #   def get_item_from_inventory():
@@ -82,13 +75,10 @@ def game():
             elif playerSelection == 'F':
                 quit()
 
-        callEmAll()
 
 
 
-
-#simple_menu.simple_menu
-#simple_menu()
+simple_menu.simple_menu
 
 #simple_menu.menuCaller
 
@@ -105,7 +95,38 @@ def main():
             print("Thank you for playing")
             exit()
 
-#selection = simple_menu()
+selection = simple_menu()
 
 main()
 
+'''
+def simple_menu():
+    print("\t\tGame Menu\n")
+    print("\t\tA - Enter Name\n\t\tB - Play Game \n\t\tC - Quit")
+    
+    valid_option = ['A','B','C']
+    
+    while True:
+        selection = input("Please enter your choice: ").upper()
+        if selection in valid_option:
+            print("That is a valid choice")
+            return selection
+#            break
+        else:
+            print("That is not a valid choice")
+
+def main():
+    while True:
+        userSelection = simple_menu()
+        if userSelection == 'A':
+            name = input("What is your name?")
+            print(f"Hello {name}, it's good to see you")
+        elif userSelection == 'B':
+            print("Game is starting...")
+        elif userSelection == 'C':
+            print("Thank you for playing")
+            exit()
+
+#selection = simple_menu()
+main()
+'''
