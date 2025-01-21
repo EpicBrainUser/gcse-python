@@ -26,4 +26,4 @@ def menuCaller():
             exit()
 
 #selection = simple_menu()
-menuCaller()
+#menuCaller()
