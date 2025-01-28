@@ -61,7 +61,7 @@ def game():
                 else:
                     print("That is not a valid choice")
         def callEmAll():
-            while True:
+            while wanna_play:
                 playerSelection = actual_game_menu()
 
             if playerSelection == 'A':
