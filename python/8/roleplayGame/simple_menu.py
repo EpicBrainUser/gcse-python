@@ -13,14 +13,15 @@ def simple_menu():
         else:
             print("That is not a valid choice")
 
-def menuCaller():
+def menuCaller(game):
     while True:
         userSelection = simple_menu()
         if userSelection == 'A':
-            name = input("What is your name?")
+            name = input("What is your name?\n >")
             print(f"Hello {name}, it's good to see you")
         elif userSelection == 'B':
             print("Game is starting...")
+            game()
         elif userSelection == 'C':
             print("Thank you for playing")
             exit()
