@@ -6,4 +6,26 @@
 #main party_list
 #4. Print final party list
 
+party_list = []
 
+def getNamesAndItems():
+    # count = 1
+    for i in range (1,6):
+        name = input(f"Please enter the name of person {i}: ")
+        instance = []
+        instance.append(name)
+        food = input("\nPlease enter the food they will bring: ")
+        instance.append(food)
+        party_list.append(instance)
+        # count += 1
+
+def printList():
+    print("The full party list is: \n\n")
+    print(*party_list, sep="\n")
+
+def main():
+    getNamesAndItems()
+    printList()
+
+if __name__ == "__main__":
+    main()
