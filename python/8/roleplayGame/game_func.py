@@ -12,15 +12,23 @@ def game():
             inventory.append(item)
             print(f"{item} has been added to your inventory.")
 
-#        def add_items_to_menu():
-#            print("This option isn't developed yet")
         def remove_item_from_inventory():
-       #      print("This option isn't developed yet")
-               remItem = input("Enter the name of the item you want to remove: ")
-               if remItem in inventory:
-                   inventory.remove(remItem)
-               else:
-                   print("Item not found in inventory")
+            print_items()
+            item_index = input("Enter the number of the item you want to remove: ")
+            try:
+                item_index = int(item_index) - 1
+                if 0 <= item_index < len(inventory):
+                    removed_item = inventory.pop(item_index)
+                    print(f"You removed {removed_item} from the inventory.")
+                else:
+                    print("Invalid item number.")
+            except ValueError:
+                print("Please enter a valid number.")           
+               # remItem = input("Enter the name of the item you want to remove: ")
+               # if remItem in inventory:
+               #     inventory.remove(remItem)
+               # else:
+               #     print("Item not found in inventory")
         def view_selected_item():
             # if not selected_item:
             #     print("Nothing selected")
