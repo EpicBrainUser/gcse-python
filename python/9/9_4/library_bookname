@@ -1,0 +1,5 @@
+function librarycode(title, year)
+    parta = title.subString(0,2)
+    partb = title.subString(0,2)
+    bookCode = parta.upper + partb
+endfunction
