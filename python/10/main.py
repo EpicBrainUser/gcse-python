@@ -11,21 +11,20 @@
 # Output a suitable message if a value does not meet format or range criteria.
 
 # from sys import stdout
-"""
-def get_score():
-    while True:
-        print("What was your score. Enter only the digits of the percent: ", end="")
-        stdout.flush()
-        try:
-            user_input = input()
-            score = float(user_input)
-        #    print(f"\rWhat was your score. Enter only the digits of the percent: {user_input}%")
-            break
-        except ValueError:
-            print("\rPlease enter a valid numeric input: ", end="")
-            stdout.flush()
-    return score
-"""
+
+# def get_score():
+#     while True:
+#         print("What was your score. Enter only the digits of the percent: ", end="")
+#         stdout.flush()
+#         try:
+#             user_input = input()
+#             score = float(user_input)
+#         #    print(f"\rWhat was your score. Enter only the digits of the percent: {user_input}%")
+#             break
+#         except ValueError:
+#             print("\rPlease enter a valid numeric input: ", end="")
+#             stdout.flush()
+#     return score
 
 
 def get_score():
