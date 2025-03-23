@@ -1,9 +1,9 @@
 def simple_menu():
     print("\t\tGame Menu\n")
     print("\t\tA - Enter Name\n\t\tB - Play Game \n\t\tC - Quit")
-    
-    valid_option = ['A','B','C']
-    
+
+    valid_option = ['A', 'B', 'C']
+
     while True:
         selection = input("Please enter your choice: ").upper()
         if selection in valid_option:
@@ -12,6 +12,7 @@ def simple_menu():
 #            break
         else:
             print("That is not a valid choice")
+
 
 def menuCaller(game):
     while True:
@@ -26,5 +27,5 @@ def menuCaller(game):
             print("Thank you for playing")
             exit()
 
-#selection = simple_menu()
-#menuCaller()
+# selection = simple_menu()
+# menuCaller()

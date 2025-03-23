@@ -17,7 +17,7 @@
 # Ideally you will use separate functions for each option, passing the updated inventory between the functions.
 
 from simple_menu import menuCaller
-from game_func import game
+from game_logic import game
 
 if __name__ == "__main__":
     menuCaller(game)

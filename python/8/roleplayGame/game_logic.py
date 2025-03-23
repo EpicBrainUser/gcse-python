@@ -111,8 +111,7 @@ def game():
     }
 
     state = {"running": True}
-    running = True
-    while running:
+    while state["running"]:
 
         player_selection = actual_game_menu()
         action = menu_actions.get(player_selection)
