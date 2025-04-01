@@ -2,13 +2,13 @@ inventory = []
 selected_item = ""
 
 
-def add_item_to_inventory():
+def add_item_to_inventory() -> None:
     item = input("Enter the item name to add: ")
     inventory.append(item)
     print(f"{item} has been added to your inventory.")
 
 
-def remove_item_from_inventory():
+def remove_item_from_inventory() -> None:
     print_items()
     item_index = input(
         "Enter the number of the item you want to remove: ")
@@ -23,7 +23,7 @@ def remove_item_from_inventory():
         print("Please enter a valid number.")
 
 
-def view_selected_item():
+def view_selected_item() -> None:
     # if not selected_item:
     #     print("Nothing selected")
     # else:
@@ -34,14 +34,14 @@ def view_selected_item():
         print(f"The current selected item is {selected_item}")
 
 
-def return_selected_item_to_inventory():
+def return_selected_item_to_inventory() -> None:
     global selected_item
     item = selected_item
     inventory.append(item)
     selected_item = ""
 
 
-def get_item_from_inventory():
+def get_item_from_inventory() -> None:
     global selected_item
     if selected_item:
         print("You already have an item selected. Return it first.")
@@ -60,7 +60,7 @@ def get_item_from_inventory():
             print("Please enter a valid number.")
 
 
-def print_items():
+def print_items() -> None:
     # print(f"Your inventory is: {inventory}")
     # print(list(enumerate(f"Your inventory is: {inventory}")))
     if not inventory:
@@ -71,7 +71,7 @@ def print_items():
             print(f"{i}. {item}")
 
 
-def actual_game_menu():
+def actual_game_menu() -> None:
     print("\t\tActual Game Menu\n")
     print("""
     A - Print Inventory Items
@@ -93,12 +93,12 @@ def actual_game_menu():
             print("That is not a valid choice\n\n\n")
 
 
-def quit_game(state):
+def quit_game(state) -> None:
     print("sorry to see you go. ")
     state["running"] = False  # Update the running flag in the shared state
 
 
-def game():
+def game() -> None:
 
     menu_actions = {
         'A': print_items,
