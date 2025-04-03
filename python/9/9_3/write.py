@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-#def write(content, file):
-#    with open(file, "w") as f:
-#        f.write(f"{content}")
+# def write(content, file):
+#     with open(file, "w") as f:
+#         f.write(f"{content}")
 
 
 def write(names, file):

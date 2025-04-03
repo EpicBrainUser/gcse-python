@@ -9,14 +9,18 @@ def getCode():
     bookCode = bookName + bookYear
     return bookCode
 
+
 def writeToFile(bookCode):
     with open ("bookcodes.txt", "a") as f:
         f.write(f"{bookCode}\n")
 
+
 def main():
-    bookCode = getCode()
+    # bookCode = getCode()
     # bookCode = convertTitle(bookName, bookYear)
-    writeToFile(bookCode)
+    # writeToFile(bookCode)
+    writeToFile(getCode())
+
 
 if __name__ == "__main__":
     main()
